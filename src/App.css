@@ -1,0 +1,171 @@
+ body 
+{  padding :"50px 0";
+  display: flex;
+  justify-content: center}
+
+
+#root
+{  width: 612px;
+  padding: 70px 35px 20px 35px;
+  border :1px solid #BCBCBC;
+  border-right: 1px solid #BCBCBC;
+  box-shadow: 0px 4px 12px 6px #ccc;}
+
+.header
+{  background :#E4E4E4;
+  width :100%;
+  height: 75px;
+  display: flex;
+  justify-content :center;
+  align-items :center;
+  margin-bottom: "50px";}
+
+.name
+{  text-align: center;
+  padding: "4px";
+  margin: "20px";
+  line-height: "1px";
+  background: #D75E27;
+  width :150px;
+  height: 150px;
+  color: white;
+  border-radius :50%;
+  border: 20px solid white;
+  line-height :"6px";}
+  
+.name__first
+{  font-weight: 300;
+  display: block;
+  margin-top: 57px
+  }
+  
+.name__last
+{  letter-spacing :"2px";
+  text-transform: uppercase;
+  display: block}
+ /*
+  
+.address
+  font-size 12px
+  text-align right
+  line-height 16px
+  font-weight bold
+  color #95989A
+  
+.address__street, .address__city
+  display block
+  
+.contact
+  font-size 12px
+  text-align left
+  line-height 16px
+  font-weight bold
+  color #95989A
+  
+.contact__email, .contact__phone
+  display block
+  
+.summary
+  text-align center
+  margin-top 20px
+  color #95989A
+  font-size 14px
+  border-bottom 1px solid #BCBCBC
+  padding 0 20px 10px 20px
+  
+.ratings
+  display flex
+  justify-content space-around
+  flex-wrap wrap
+  align-items flex-end
+  height 175px
+  border-bottom 1px solid #BCBCBC
+  
+.skill__name
+  display inline-block
+  width 80px
+  font-weight 600
+  color #95989A
+  font-size 10px
+  -webkit-margin-before 0
+  
+// Change the background  
+div.ui.star.skill__rating>.active.icon
+  color #D75E27 !important
+  
+div.ui.star.skill__rating>.selected.icon,
+div.ui.star.skill__rating>.active.selected.icon,
+  color #D75E27 !important
+  opacity 0.75 !important
+  
+.heading {
+  font-size 1.25em
+  -webkit-margin-after 0.25em
+}
+  
+.qualifications
+{  display flex
+  justify-content space-between}
+  
+.experience
+  {text-align: "right";
+  color: #333333;
+  width "48%";}
+
+  
+.history
+  width 48%
+  text-align left
+  color #333333
+  
+.job, .school, .project
+  color #95989A
+  
+.job__title, .job__date, .school__name, .school__location, .project__title
+  font-size 14px
+  font-weight 700
+  text-transform uppercase
+  -webkit-margin-after 0
+  display block
+  
+.project__title
+  margin-top 14px
+  
+.school__location
+  font-size 13px
+  margin-bottom 14px
+  
+.job__summary, .school__degree, .school__cos, .project__desc
+  text-align left
+  font-size 14px
+  display block
+  line-height 1.25
+  
+.school__cos
+  margin-bottom 14px
+  
+.project__url
+  font-weight 600
+  font-size 15px
+  
+.job__summary, .project__desc
+  text-align justify
+  
+.footer
+  margin-top 15px
+  padding 15px 0
+  width 100%
+  background #E4E4E4
+  
+.footer__inner
+  width 100%
+  height 30px
+  background #D75E27
+  display flex
+  justify-content space-around
+  align-items center
+  color #FFFFFF
+  font-size 14px
+  
+  
+   */

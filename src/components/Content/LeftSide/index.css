@@ -1,0 +1,25 @@
+.leftSide_container {
+  width: 30%;
+  height: auto;
+  background-color: #325283;
+  color: white;
+}
+
+.avatar_container {
+  display: flex;
+  justify-content: center;
+  border-radius: '50%';
+}
+
+.contactUs_container {
+  margin: 50px 0;
+}
+
+.contactUs_container span {
+  font-size: 15px;
+}
+
+.leftSIde_heading {
+  display: flex;
+  justify-content: space-around;
+}

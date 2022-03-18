@@ -1,0 +1,10 @@
+.form_context {
+  color: #777;
+  background: #f7f7f7;
+  border: '1px solid';
+  width: 550px;
+}
+
+.form_context span {
+  font-size: 22px;
+}
