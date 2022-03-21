@@ -3,7 +3,7 @@
   /* overflow-y: scroll; */
   display: flex;
   justify-content: space-between;
-  padding: 3px 35px;
+  /* padding: 3px 30px; */
   border :2px solid #BCBCBC;
   border-right: 2px solid #BCBCBC;
   box-shadow: 0px 4px 12px 6px #ccc;}

@@ -19,17 +19,28 @@ const initialState = {
   heading: {
     name: 'Zeeshan Noor',
     jobTitle: 'ReactJs Developer',
-    personalInfo:'A React developer with 1 years of experience in Javascript.'
+    personalInfo: 'A React developer with 1 years of experience in Javascript.',
   },
-  experience:{
-    title:"Work Experience",
-    organization:"OzoneAI",
-    role:"ML Engineer",
-    startDate:"Apr 2019",
-    endDate:'',
-    point1:"Utilized PySpark to distribute data processing on large streaming datasets to improve ingestion and processing speed of that daat by 87%",
-    point2:'Build basic ETL that ingested transactional and event data from a web app with 10,000 daily active users that saved over $85,000 annually in external vendor costs'
-  }
+  experience: {
+    title: 'Work Experience',
+    organization: 'OzoneAI',
+    role: 'ML Engineer',
+    startDate: 'Apr 2019',
+    endDate: '',
+    point1:
+      'Utilized PySpark to distribute data processing on large streaming datasets to improve ingestion and processing speed of that daat by 87%',
+    point2:
+      'Build basic ETL that ingested transactional and event data from a web app with 10,000 daily active users that saved over $85,000 annually in external vendor costs',
+  },
+  AddMore: {
+    title: 'Project',
+    organization: 'Artificial Intelligence',
+    role: 'ML Engineer',
+    startDate: 'Nov-2020',
+    endDate: 'Dec-2020',
+    point1: 'PySpark to distribute data processing on large streaming datasets',
+    point2: '',
+  },
 };
 
 export const clickSlice = createSlice({
@@ -69,6 +80,11 @@ export const clickSlice = createSlice({
       const name = action.payload.name;
       state.experience[name] = value;
     },
+    AddMoreExperienceFormReducer: (state, action) => {
+      const value = action.payload.value;
+      const name = action.payload.name;
+      state.AddMore[name] = value;
+    },
   },
 });
 
@@ -78,6 +94,7 @@ export const {
   skillFormReducer,
   HeaderFormReducer,
   ExperienceFormReducer,
+  AddMoreExperienceFormReducer,
 } = clickSlice.actions;
 
 export default clickSlice.reducer;

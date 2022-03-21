@@ -6,6 +6,7 @@ import './index.css';
 import { useSelector } from 'react-redux';
 import PersonalInfoForm from './PersonalForm';
 import ExperienceForm from './ExperienceForm';
+import AddMoreExperienceForm from './AddMoreForm';
 
 const CommonForm = () => {
   const click = useSelector((state) => state.clickForm.click);
@@ -16,11 +17,6 @@ const CommonForm = () => {
         return (
           <div className='form_context'>
             <span
-              // style={{
-              //   textAlign: 'center',
-              //   height: 200,
-              //   width: 350,
-              // }}
               style={{
                 textAlign: 'center',
                 height: 300,
@@ -41,6 +37,8 @@ const CommonForm = () => {
         return <PersonalInfoForm />;
       case 5:
         return <ExperienceForm />;
+      case 6:
+        return <AddMoreExperienceForm />;
       default:
         break;
     }

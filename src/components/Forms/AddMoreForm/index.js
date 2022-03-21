@@ -1,8 +1,7 @@
-import { Form, Input,Space,Button } from 'antd';
+import { Form, Input} from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
-import { ExperienceFormReducer } from '../../../app/slices/editform';
+import { AddMoreExperienceFormReducer } from '../../../app/slices/editform';
 
 const layout = {
   labelCol: {
@@ -26,23 +25,23 @@ const validateMessages = {
 };
 /* eslint-enable no-template-curly-in-string */
 
-const ExperienceForm = () => {
+const AddMoreExperienceForm = () => {
   const dispatch = useDispatch();
 
-  const experience = useSelector((state) => state.clickForm.experience);
+  const AddMore = useSelector((state) => state.clickForm.AddMore);
 
   const onFinish = (name, value) => {
     const payload = {
       name: name,
       value: value,
     };
-    dispatch(ExperienceFormReducer(payload));
+    dispatch(AddMoreExperienceFormReducer(payload));
   };
 
   return (
     <Form
       {...layout}
-      initialValues={experience}
+      initialValues={AddMore}
       onFinish={onFinish}
       validateMessages={validateMessages}
       style={{ width: '550px' }}
@@ -79,4 +78,4 @@ const ExperienceForm = () => {
   );
 };
 
-export default ExperienceForm;
+export default AddMoreExperienceForm;

@@ -1,17 +1,25 @@
 import React from 'react';
 import './index.css';
 import { useSelector, useDispatch } from 'react-redux';
-import { editFormReducer } from '../../../app/slices/editform';
+import {
+  editFormReducer,
+} from '../../../app/slices/editform';
 import { Button } from 'antd';
-import { EditOutlined } from '@ant-design/icons';
+import { EditOutlined, PlusCircleOutlined } from '@ant-design/icons';
+import AddContent from './AddContent';
 const RightSide = () => {
   const dispatch = useDispatch();
-
+const [showAddMore, setShowAddMore] = React.useState(false)
   const handleOnClick = (state) => {
     dispatch(editFormReducer(state));
   };
+  const handleOnAddMore = () => (
+ setShowAddMore(!showAddMore)
+  );
+
   const value = useSelector((state) => state.clickForm.heading);
   const experience = useSelector((state) => state.clickForm.experience);
+
   return (
     <div className='rightSide_container'>
       <div style={{ width: '175px', borderTop: '3px solid #7b92ed' }} />
@@ -53,6 +61,16 @@ const RightSide = () => {
         {experience.point1 !== '' ? <li>{experience.point1}</li> : null}
         {experience.point2 !== '' ? <li>{experience.point2}</li> : null}
       </ul>
+      
+      {!showAddMore?<Button
+        type='dashed'
+        onClick={handleOnAddMore}
+        style={{ color: '#325283' }}
+        block
+        icon={<PlusCircleOutlined />}
+      >
+        Add
+      </Button>:<AddContent/>}
     </div>
   );
 };
