@@ -3,19 +3,32 @@ import './index.css';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   editFormReducer,
+  AddMoreExperienceFormReducer,
 } from '../../../app/slices/editform';
 import { Button } from 'antd';
 import { EditOutlined, PlusCircleOutlined } from '@ant-design/icons';
 import AddContent from './AddContent';
 const RightSide = () => {
   const dispatch = useDispatch();
-const [showAddMore, setShowAddMore] = React.useState(false)
+  const [showAddMore, setShowAddMore] = React.useState(false);
   const handleOnClick = (state) => {
     dispatch(editFormReducer(state));
   };
-  const handleOnAddMore = () => (
- setShowAddMore(!showAddMore)
-  );
+  const handleOnAddMore = () => {
+    setShowAddMore(!showAddMore);
+    const payload = {
+      title: 'Project',
+      organization: 'Artificial Intelligence',
+      role: 'ML Engineer',
+      startDate: 'Nov-2020',
+      endDate: 'Dec-2020',
+      point1:
+        'PySpark to distribute data processing on large streaming datasets',
+      point2: '',
+    };
+
+    dispatch(AddMoreExperienceFormReducer(payload));
+  };
 
   const value = useSelector((state) => state.clickForm.heading);
   const experience = useSelector((state) => state.clickForm.experience);
@@ -61,8 +74,9 @@ const [showAddMore, setShowAddMore] = React.useState(false)
         {experience.point1 !== '' ? <li>{experience.point1}</li> : null}
         {experience.point2 !== '' ? <li>{experience.point2}</li> : null}
       </ul>
-      
-      {!showAddMore?<Button
+
+      <AddContent />
+      <Button
         type='dashed'
         onClick={handleOnAddMore}
         style={{ color: '#325283' }}
@@ -70,7 +84,7 @@ const [showAddMore, setShowAddMore] = React.useState(false)
         icon={<PlusCircleOutlined />}
       >
         Add
-      </Button>:<AddContent/>}
+      </Button>
     </div>
   );
 };

@@ -38,7 +38,9 @@ const CommonForm = () => {
       case 5:
         return <ExperienceForm />;
       case 6:
-        return <AddMoreExperienceForm />;
+        return <AddMoreExperienceForm index={0}/>;
+      case 7:
+        return <AddMoreExperienceForm index={1}/>;
       default:
         break;
     }

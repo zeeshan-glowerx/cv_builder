@@ -32,16 +32,7 @@ const initialState = {
     point2:
       'Build basic ETL that ingested transactional and event data from a web app with 10,000 daily active users that saved over $85,000 annually in external vendor costs',
   },
-  AddMore: {
-    title: 'Project',
-    organization: 'Artificial Intelligence',
-    role: 'ML Engineer',
-    startDate: 'Nov-2020',
-    endDate: 'Dec-2020',
-    point1: 'PySpark to distribute data processing on large streaming datasets',
-    point2: '',
-  },
-};
+  AddMore: [],};
 
 export const clickSlice = createSlice({
   name: 'click',
@@ -80,10 +71,14 @@ export const clickSlice = createSlice({
       const name = action.payload.name;
       state.experience[name] = value;
     },
-    AddMoreExperienceFormReducer: (state, action) => {
+    UpdateExperienceFormReducer: (state, action) => {
       const value = action.payload.value;
+      const index = action.payload.index;
       const name = action.payload.name;
-      state.AddMore[name] = value;
+      state.AddMore[index][name] = value;
+    },
+    AddMoreExperienceFormReducer: (state, action) => {
+      state.AddMore.push(action.payload);
     },
   },
 });
@@ -95,6 +90,7 @@ export const {
   HeaderFormReducer,
   ExperienceFormReducer,
   AddMoreExperienceFormReducer,
+  UpdateExperienceFormReducer,
 } = clickSlice.actions;
 
 export default clickSlice.reducer;

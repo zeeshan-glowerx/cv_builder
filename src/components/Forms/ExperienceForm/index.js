@@ -1,6 +1,5 @@
-import { Form, Input,Space,Button } from 'antd';
+import { Form, Input} from 'antd';
 import { useSelector, useDispatch } from 'react-redux';
-import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 import { ExperienceFormReducer } from '../../../app/slices/editform';
 
